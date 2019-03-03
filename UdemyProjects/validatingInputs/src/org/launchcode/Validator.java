@@ -1,17 +1,33 @@
 package org.launchcode;
 
+import java.util.Scanner;
 
 public class Validator {
+
+
     public int getIntegerBetween(int lower, int upper) {
-//        do {
-//
-//        } while(lower !7);
-        return 0;
+        Scanner keyboard = new Scanner ( System.in );
+
+        int number;
+        do {
+            number = keyboard.nextInt ();
+            System.out.println ( "Guess again." );
+          //  keyboard.skip ( "/n" );
+        } while (number != 7);
+
+        return number;
     }
 
     public int getTensInteger(int lower, int upper) {
-        // TO-DO
-        return 0;
+        Scanner keyboard = new Scanner ( System.in );
+        int number;
+        do {
+
+            number = keyboard.nextInt ();
+            System.out.println ( "Guess again." );
+            //  keyboard.skip ( "/n" );
+        } while (number != 230);
+        return number;
     }
 }
 
