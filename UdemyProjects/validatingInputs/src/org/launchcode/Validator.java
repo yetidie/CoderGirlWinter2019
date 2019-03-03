@@ -9,11 +9,17 @@ public class Validator {
         Scanner keyboard = new Scanner ( System.in );
 
         int number;
+        int answer = 7;
         do {
+
             number = keyboard.nextInt ();
-            System.out.println ( "Guess again." );
-          //  keyboard.skip ( "/n" );
-        } while (number != 7);
+            if (number != answer) {
+                //number = keyboard.nextInt ();
+                System.out.println ( "Error, invalid number. Try again." );
+            }
+            //keyboard.skip ( "/n" );}
+        } while (number != answer);
+
 
         return number;
     }
@@ -21,12 +27,15 @@ public class Validator {
     public int getTensInteger(int lower, int upper) {
         Scanner keyboard = new Scanner ( System.in );
         int number;
+        int answer = 230;
         do {
-
             number = keyboard.nextInt ();
-            System.out.println ( "Guess again." );
-            //  keyboard.skip ( "/n" );
-        } while (number != 230);
+            if (number != answer) {
+                System.out.println ( "Error, invalid number. Try again." );
+            }
+            //keyboard.skip ( "/n" );}
+        } while (number != answer);
+
         return number;
     }
 }
