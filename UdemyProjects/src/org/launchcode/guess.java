@@ -1,24 +1,28 @@
 package org.launchcode;
 
 import java.util.Scanner;
-//import java.util.Random;
+import java.util.Random;
 
 public class guess {
-
+    Random think = new Random(2);
 
     public void guessingGame(int lower, int upper) {
         Scanner keyboard = new Scanner ( System.in );
 
-        int answer = 33;
+
+        int answer = think.nextInt (100);
 
 
         int number;
         System.out.println ( "I'm thinking of a number between 1 and 100. What is it?" );
         do {
             number = keyboard.nextInt ();
-            if (number > 100) {
+            System.out.println ( "Guess: " + number );
+
+            if(number > 100) {
                 System.out.println ( "Oops! That number isn't between 1 and 100. Try again." );
-            } else if (number > answer) {
+            }
+            else if (number > answer) {
 
                 System.out.println ( "My number is lower." );
 
@@ -29,7 +33,7 @@ public class guess {
                 playAgain ();
             }
 
-            System.out.println ( "Guess: " + number );
+
 
         } while (number != answer);
 
@@ -41,7 +45,7 @@ public class guess {
     public void playAgain() {
         Scanner keyboard = new Scanner ( System.in );
 
-        System.out.println ( "Play again?" );
+       System.out.println ( "Play again?" );
         String end = keyboard.nextLine ().toLowerCase ();
 
 
@@ -49,10 +53,13 @@ public class guess {
 
             guessingGame ( 1, 100 );
 
-        } else if (end.equals ( "no" )) System.out.println ( "Another time then!" );
+        } else if (end.equals ( "no" )) {
+            System.out.println ( "Another time then!" );
+
+        }
         else {
             System.out.println ( "Error: invalid input. Try again." );
-            playAgain ();
+
         }
 
     }
