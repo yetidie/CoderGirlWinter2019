@@ -1,10 +1,10 @@
 package org.launchcode;
 
-public class Main {
+public class temperature {
 
     public static void main(String[] args) {
 
-
+            System.out.println("Welcome to Temperature Calculator! \n \n");
             System.out.println("The data provided are:");
             int temps[][] = {{68, 70, 76, 70, 68, 71, 75},
                     {76, 76, 87, 84, 82, 75, 83},
@@ -35,7 +35,7 @@ public class Main {
                 double columnAverage=columnTotal/4;
                 weekDays[1][i]=columnAverage+" ";
             } for (int i=0;i<7;i++){
-                System.out.println(weekDays[0][i]+"   "+weekDays[1][i] +" \n");                }System.out.println();
+                System.out.println(weekDays[0][i]+"   "+weekDays[1][i] +" \n");                };
 
 
             for (int j = 0; j < 4; j++) {
