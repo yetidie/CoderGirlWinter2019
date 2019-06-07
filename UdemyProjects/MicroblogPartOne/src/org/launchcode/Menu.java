@@ -49,6 +49,7 @@ public class Menu {
                     break;
                 case 2:
                     Creator createPost = new Creator ();
+                    System.out.println ("About to create a post with user " + this.currentUser.getUserName ());
                     Post post = createPost.createPost (this.currentUser);
                     this.postLog.add ( post );
                     break;
@@ -69,11 +70,11 @@ public class Menu {
                     System.out.println ( "Who do you want to log in as?" );
                     userSelection = keyboard.nextInt ();
                     keyboard.skip ( "\n" );
-                    if (userSelection <= 0) {
+                    //if (userSelection <= 0) {
                         currentUser = userLog.get ( userSelection );
                         return currentUser;
-                    }
-                    break;
+                    //}
+                    //break;
             }
 
          return null;
@@ -97,5 +98,4 @@ public class Menu {
             System.out.println("  ");
         }
 
-
-    }
+   }

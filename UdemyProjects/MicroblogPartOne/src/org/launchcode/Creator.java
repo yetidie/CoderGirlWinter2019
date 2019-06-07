@@ -9,12 +9,17 @@ public class Creator {
         this.keyboard = new Scanner(System.in);
     }
 
-    public Post createPost(User user){
-        System.out.println ("Username: " + user.getUserName());
+    public Post createPost(User currentUser){
+        if(currentUser == null){
+           System.out.println ( "Error" );
+                    return null;
+        }
+
+        System.out.println ("Username: " + currentUser.getUserName());
         String validate;
         Post newPost;
         do{
-            newPost = writePost(user);
+            newPost = writePost(currentUser);
             System.out.println("\n" + newPost.toString () + "\n");
             System.out.println("Is this correct? (Enter \"y\" for yes)");
             validate = keyboard.nextLine();
