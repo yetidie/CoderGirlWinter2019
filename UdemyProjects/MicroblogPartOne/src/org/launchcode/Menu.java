@@ -40,17 +40,17 @@ public class Menu {
         private void welcome() {
             System.out.println("Hello! Welcome to the Posts Department!");
         }
-        private void processSelection(int selection) {
-            switch (selection){
+        private User processSelection(int selection) {
+            switch (selection) {
                 case 1:
-                    Creator createUser = new Creator();
-                    User user = createUser.createUser();
-                    this.userLog.add(user);
+                    Creator createUser = new Creator ();
+                    User user = createUser.createUser ();
+                    this.userLog.add ( user );
                     break;
                 case 2:
                     Creator createPost = new Creator ();
-                    Post post = createPost.createPost();
-                    this.postLog.add(post);
+                    Post post = createPost.createPost (this.currentUser);
+                    this.postLog.add ( post );
                     break;
                 case 3:
                     postAll ();
@@ -59,16 +59,24 @@ public class Menu {
                     listUser ();
                     break;
                 case 5:
-
-                //    User.userSignin;
-
-                    for(int i = 0; i <= userLog.size (); i++) {
-                    System.out.println ( i + ") " + userLog.get ( i ) );
+                    //    User.userSignin;
+                    //this.currentUser = null;
+                    Scanner keyboard = new Scanner ( System.in );
+                    int userSelection;
+                    for (int i = 0; i < userLog.size(); i++) {
+                        System.out.println ( i + ") " + userLog.get ( i ) );
                     }
-
-
-                break;
+                    System.out.println ( "Who do you want to log in as?" );
+                    userSelection = keyboard.nextInt ();
+                    keyboard.skip ( "\n" );
+                    if (userSelection <= 0) {
+                        currentUser = userLog.get ( userSelection );
+                        return currentUser;
+                    }
+                    break;
             }
+
+         return null;
         }
 
         private void postAll(){

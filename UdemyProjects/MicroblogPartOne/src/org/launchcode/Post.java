@@ -28,7 +28,7 @@ public class Post {
     }
 
     public void setUser(User user) {
-        user = user;
+        this.user = user;
     }
 
 
@@ -54,8 +54,8 @@ public class Post {
     public String toString() {
         return "Post Number: " + this.id + "\n" +
                 "Username: " + this.getUser () + "\n" +
-                "Real Name:" + this.user.getfirstName () + "\n" + this.user.getlastName () +
-                "URL: " + this. user.getUrl() + "\n" +
+                //"Real Name:" + this.user.getfirstName () + "\n" + this.user.getlastName () +
+                //"URL: " + this.user.getUrl() + "\n" +
                 this.postTitle + "\n" +
                 "Post: " + this.postText + "\n" ;
 

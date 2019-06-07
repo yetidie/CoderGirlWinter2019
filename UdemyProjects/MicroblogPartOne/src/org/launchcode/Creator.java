@@ -9,12 +9,12 @@ public class Creator {
         this.keyboard = new Scanner(System.in);
     }
 
-    public Post createPost(){
-        User user = createUser();
+    public Post createPost(User user){
+        System.out.println ("Username: " + user.getUserName());
         String validate;
         Post newPost;
         do{
-            newPost = createPost(user);
+            newPost = writePost(user);
             System.out.println("\n" + newPost.toString () + "\n");
             System.out.println("Is this correct? (Enter \"y\" for yes)");
             validate = keyboard.nextLine();
@@ -37,7 +37,7 @@ public class Creator {
         return user;
     }
 
-    public Post createPost(User user){
+    public Post writePost(User user){
         Post post = new Post();
         post.setUser(user);
         System.out.println("How would you like to title your post?");
