@@ -25,7 +25,7 @@ public class User {
             this.userName = userName;
         }
         public String getUserName(){
-            return this.userName;
+            return userName;
         }
         public void setRealName(String realName){
             this.realName = realName;
