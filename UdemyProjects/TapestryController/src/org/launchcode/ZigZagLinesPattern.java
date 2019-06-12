@@ -10,9 +10,11 @@ public class ZigZagLinesPattern extends Pattern {
 
         for (int s = 0; s < 2; s++) {
             for (int i = 0; i < 3; i++) {
-                return z;
+                System.out.println (z);
             }
             for (int i = 0; i < 3; i++) {
-                return f;
+                System.out.println (f);
+            }
+        }
     }
 }

@@ -5,8 +5,15 @@ public class BaublePattern extends Pattern {
         ShortlLineStitch sl = new ShortlLineStitch ();
         CircleStitch cs = new CircleStitch ();
 
-        System.out.println (sl);
-        System.out.println (sl);
-        System.out.println (cs);
+        for (int s = 0; s < 5; s++) {
+            for (int i = 0; i < 2; i++) {
+                System.out.println (sl);
+                System.out.println (sl);
+            }
+            for (int i = 0; i < 1; i++) {
+                System.out.println (cs);
+            }
+        }
+
     }
 }
