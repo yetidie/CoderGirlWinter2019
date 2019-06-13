@@ -48,10 +48,13 @@ public class Menu {
                     this.userLog.add ( user );
                     break;
                 case 2:
+                    if(currentUser != null){
                     Creator createPost = new Creator ();
                     System.out.println ("About to create a post with user " + this.currentUser.getUserName ());
                     Post post = createPost.createPost (this.currentUser);
-                    this.postLog.add ( post );
+                    this.postLog.add ( post );}else{
+                        System.out.println ("Remember to Log in!");
+                    }
                     break;
                 case 3:
                     postAll ();
