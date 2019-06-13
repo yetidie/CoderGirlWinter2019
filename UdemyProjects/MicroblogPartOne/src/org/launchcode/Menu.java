@@ -67,7 +67,7 @@ public class Menu {
                     for (int i = 0; i < userLog.size(); i++) {
                         System.out.println ( i + ") " + userLog.get ( i ) );
                     }
-                    System.out.println ( "Who do you want to log in as?" );
+                    System.out.println ( "Who do you want to log in as? (Enter number next to the UserName)" );
                     userSelection = keyboard.nextInt ();
                     keyboard.skip ( "\n" );
                     //if (userSelection <= 0) {
