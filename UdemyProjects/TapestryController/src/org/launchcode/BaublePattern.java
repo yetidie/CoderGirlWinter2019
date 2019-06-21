@@ -2,11 +2,11 @@ package org.launchcode;
 
 
 public class BaublePattern extends Pattern {
-    public void baublePattern() {
+    public void pattern() {
         Stitch sls = new ShortlLineStitch ();
         Stitch cs = new CircleStitch ();
 
-        //public void patterns(){
+
             for (int i = 0; i < 5; i++) {
                 sls.sew ();
                 sls.sew ();
@@ -14,7 +14,7 @@ public class BaublePattern extends Pattern {
 
 
             }
-        //}
+
     }
 
     }

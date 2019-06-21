@@ -2,17 +2,25 @@ package org.launchcode;
 
 public class CrossStitchWigglePattern extends Pattern {
 
-
-    public void crossStitchWigglePattern() {
-
-        SmallCrossStitch scs = new SmallCrossStitch ();
-        LargeCrossStitch lcs = new LargeCrossStitch ();
+    private Stitch scs = new SmallCrossStitch ();
+    private Stitch lcs = new LargeCrossStitch ();
 
 
-                    for (int i=0;i<5;i++){
-                        scs.sew();
-                        lcs.sew();
-
-                    }
-                }
+    public void pattern(){
+        boolean needleJam = (Math.random() < 0.1d);
+        if (needleJam){
+            for (int i = 0; i < 2; i++) {
+                scs.sew ();
+                lcs.sew();
             }
+        } else {
+            for (int i = 0; i < 3; i++) {
+                scs.sew ();
+                lcs.sew();
+            }
+        }
+    }
+
+
+}
+
