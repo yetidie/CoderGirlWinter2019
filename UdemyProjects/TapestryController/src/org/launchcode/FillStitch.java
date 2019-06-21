@@ -1,7 +1,7 @@
 package org.launchcode;
 
 public class FillStitch extends Stitch {
-    public void fillStitch(){
-        System.out.println ("=");
+    public void sew(){
+        System.out.print("=");
     }
 }

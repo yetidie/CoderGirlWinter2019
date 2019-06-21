@@ -1,7 +1,7 @@
 package org.launchcode;
 
 public class SmallCrossStitch extends  Stitch {
-    public void smallCrossStitch(){
+    public void sew(){
         System.out.println ("x");
     }
 }

@@ -5,17 +5,14 @@ public class CrossStitchWigglePattern extends Pattern {
 
     public void crossStitchWigglePattern() {
 
-        SmallCrossStitch sc = new SmallCrossStitch ();
-        LargeCrossStitch lc = new LargeCrossStitch ();
+        SmallCrossStitch scs = new SmallCrossStitch ();
+        LargeCrossStitch lcs = new LargeCrossStitch ();
 
-        for (int s = 0; s < 5; s++) {
-            for (int i = 0; i < 1; i++) {
-                System.out.println ( sc );
 
+                    for (int i=0;i<5;i++){
+                        scs.sew();
+                        lcs.sew();
+
+                    }
+                }
             }
-            for (int i = 0; i < 1; i++) {
-                System.out.println ( lc );
-            }
-        }
-    }
-}

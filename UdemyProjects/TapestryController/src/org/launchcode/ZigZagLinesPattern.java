@@ -1,20 +1,23 @@
 package org.launchcode;
 
 public class ZigZagLinesPattern extends Pattern {
-    private Object ZigZagStitch;
 
-    public void zigZagLine(){
 
-        ZigZagStitch z = new ZigZagStitch();
-        FillStitch f = new FillStitch();
+    public void pattern() {
 
-        for (int s = 0; s < 2; s++) {
-            for (int i = 0; i < 3; i++) {
-                System.out.println (z);
+        ZigZagStitch zzs = new ZigZagStitch ();
+        FillStitch fs = new FillStitch ();
+
+
+            for (int i = 0; i < 2; i++) {
+                zzs.sew ();
+                zzs.sew ();
+                zzs.sew ();
+                fs.sew ();
+                fs.sew ();
+                fs.sew();
+
             }
-            for (int i = 0; i < 3; i++) {
-                System.out.println (f);
-            }
-        }
+
     }
-}
+        }
