@@ -6,6 +6,7 @@ public class CrossStitchWigglePattern extends Pattern {
     private Stitch lcs = new LargeCrossStitch ();
 
 
+
     public void pattern(){
        boolean needleJam = (Math.random() < 0.1d);
        if (needleJam){
