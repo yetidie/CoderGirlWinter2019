@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns.tb="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${title}">Title</title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+    <p th:unless="${cheeses} and ${cheeses.size}">no cheese</p>
+<ul>
+    <li th:each="cheese : ${cheeses}" th:text="${cheese}"></li>
+
+</ul>
+</body>
+</html>
